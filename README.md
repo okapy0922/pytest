@@ -119,3 +119,29 @@ poetry env use python3.13
 #### pytest実行
 poetry run pytest
 
+### 6. 実行結果
+```bash
+
+ poetry run pytest
+=============================================================================== test session starts ================================================================================
+platform linux -- Python 3.13.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/okapy/pytest
+configfile: pyproject.toml
+collected 6 items
+
+pytest-practice/test_calculator.py ......                                                                                                                                    [100%]
+
+================================================================================ 6 passed in 0.01s =================================================================================
+```
+collected 6 items
+テスト対象として検出された関数の数です
+今回の test_calculator.py では、test_add が3パターン、test_divide が2パターン、test_divide_zero が1件で合計6件です。
+
+pytest-practice/test_calculator.py ...... [100%]
+ドット（.）はテスト1件が成功したことを示しています。
+6つのドットで6件すべて成功。
+[100%] はテスト完了率です。
+
+6 passed in 0.01s
+すべてのテストが成功（passed）したことと、テスト実行にかかった時間です。
+
